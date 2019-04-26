@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipies';
-  page: string;
+  page = 'RECIPES';
 
   setPage = (pageName: string) => {
     this.page = pageName;
