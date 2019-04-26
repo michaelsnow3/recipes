@@ -10,15 +10,15 @@ export class ShoppingListEditComponent implements OnInit {
   @Output() testButtonClicked = new EventEmitter<{ test: string }>();
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
-  @ViewChild('nameInput') name;
-  @ViewChild('amountInput') amount;
+  @ViewChild('nameInput') nameInputRef;
+  @ViewChild('amountInput') amountInputRef;
   constructor() {}
 
   ngOnInit() {}
   onAddItem = () => {
     this.ingredientAdded.emit({
-      name: this.name.nativeElement.value,
-      amount: this.amount.nativeElement.value
+      name: this.nameInputRef.nativeElement.value,
+      amount: this.amountInputRef.nativeElement.value
     });
   };
 }
