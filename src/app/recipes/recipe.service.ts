@@ -13,4 +13,7 @@ export class RecipeService {
       'https://get.pxhere.com/photo/dish-meal-food-produce-recipe-fish-breakfast-meat-pork-cuisine-steak-pork-chop-power-dishes-grilling-fried-food-604134.jpg'
     )
   ];
+  getRecipes = () => {
+    return this.recipes.slice();
+  };
 }
